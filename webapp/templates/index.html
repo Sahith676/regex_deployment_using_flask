@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regex Matching Results</title>
+</head>
+<body>
+    {% for i in range(matches_list|length) %}
+        {% if matches_list[i] %}
+            <h1>Matches found in "{{ text_list[i] }}": {{ matches_list[i] }}</h1>
+        {% else %}
+            <h1>No matches found in "{{ text_list[i] }}" for regex pattern "{{ regex_pattern }}"</h1>
+        {% endif %}
+    {% endfor %}
+</body>
+</html>
